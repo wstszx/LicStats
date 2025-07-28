@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件许可证分析看板</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>软件许可证 (FlexNet/FlexLM) 日志分析</h1>
+            <p>上传 lmstat 日志文件 (.txt)，即时生成可视化分析报告。</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <input type="file" id="logFile" accept=".txt">
+                <label for="logFile" class="upload-button">选择日志文件</label>
+                <span id="fileName" class="file-name">未选择文件</span>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">正在解析，请稍候...</div>
+            <div id="error" class="error" style="display: none;"></div>
+
+            <div id="results" class="results" style="display: none;">
+                <div class="chart-container">
+                    <h2>许可证使用概览</h2>
+                    <canvas id="licenseChart"></canvas>
+                </div>
+
+                <div class="table-container">
+                    <h2>在用许可证详情</h2>
+                    <input type="text" id="searchInput" placeholder="按功能模块或用户名搜索...">
+                    <table id="licenseTable">
+                        <thead>
+                            <tr>
+                                <th data-sort="featureName">功能模块 &#x25B2;&#x25BC;</th>
+                                <th data-sort="username">使用者 &#x25B2;&#x25BC;</th>
+                                <th data-sort="hostname">主机名 &#x25B2;&#x25BC;</th>
+                                <th data-sort="startTime">开始使用时间 &#x25B2;&#x25BC;</th>
+                                <th data-sort="duration">已使用时长 &#x25B2;&#x25BC;</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- 数据将通过JS动态插入 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>轻量级许可证分析工具</p>
+        </footer>
+    </div>
+
+    <!-- Libraries - Using CDN for simplicity, compatible with IE11 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    
+    <!-- Main application script -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
