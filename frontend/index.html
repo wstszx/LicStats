@@ -178,34 +178,33 @@
 
         .health-chart {
             height: 150px;
-            border: 2px solid #ecf0f1;
             border-radius: 8px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(90deg, #ecf0f1 0%, #bdc3c7 100%);
+            background: #080a0e;
+            padding: 0;
+            border: 1px solid #2c3e50;
         }
 
-        .heartbeat-line {
-            position: absolute;
-            top: 50%;
-            left: 0;
+        .chart-container {
             width: 100%;
-            height: 2px;
-            background: #27ae60;
-            transform: translateY(-1px);
-            animation: heartbeat 2s infinite;
+            height: 100%;
+            position: relative;
         }
 
-        @keyframes heartbeat {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(-1px) scaleY(1);
-            }
-            40% {
-                transform: translateY(-20px) scaleY(3);
-            }
-            60% {
-                transform: translateY(-10px) scaleY(2);
-            }
+        .line-chart {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .chart-line {
+            fill: none;
+            stroke: #00ff7f; /* SpringGreen */
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 2px #00ff7f) drop-shadow(0 0 5px rgba(0, 255, 127, 0.5));
         }
 
         .license-table {
@@ -250,6 +249,39 @@
         .usage-low { background: #27ae60; }
         .usage-medium { background: #f39c12; }
         .usage-high { background: #e74c3c; }
+
+        .chart-bars-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 15px;
+            gap: 15px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #667eea #e0e6ed;
+        }
+
+        .chart-bars-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .chart-bars-container::-webkit-scrollbar-track {
+            background: #e0e6ed;
+            border-radius: 4px;
+        }
+
+        .chart-bars-container::-webkit-scrollbar-thumb {
+            background-color: #667eea;
+            border-radius: 4px;
+        }
+
+        .bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            min-width: 60px;
+            max-width: 60px;
+        }
 
         .stats-card {
             background: white;
@@ -301,6 +333,22 @@
             margin: 20px 0;
         }
 
+        @media (max-width: 1200px) {
+            .bar-chart {
+                height: 240px;
+                padding: 15px;
+            }
+            
+            .bar-item {
+                min-width: 50px;
+                max-width: 50px;
+            }
+            
+            .bar {
+                width: 35px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .dashboard {
                 grid-template-columns: 1fr;
@@ -314,6 +362,95 @@
             .status-bar {
                 flex-direction: column;
                 text-align: center;
+            }
+            
+            .chart-view {
+                margin: 0 0 15px 0;
+                padding: 15px;
+            }
+            
+            .bar-chart {
+                height: 200px;
+            }
+            
+            .chart-bars-container {
+                gap: 4px;
+                padding: 10px;
+            }
+            
+            .bar-item {
+                min-width: 40px;
+                max-width: 40px;
+                flex-shrink: 0;
+            }
+            
+            .bar {
+                width: 30px;
+            }
+            
+            .bar-label {
+                font-size: 9px;
+                padding: 2px 1px;
+            }
+            
+            .chart-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .chart-stat-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+                background: white;
+                border-radius: 6px;
+                border: 1px solid #e0e6ed;
+            }
+            
+            .chart-stat-value {
+                font-size: 16px;
+            }
+            
+            .chart-stat-label {
+                font-size: 11px;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chart-view {
+                margin: 0 0 10px 0;
+                padding: 10px;
+            }
+            
+            .bar-chart {
+                height: 160px;
+            }
+            
+            .chart-bars-container {
+                padding: 8px;
+                gap: 2px;
+            }
+            
+            .bar-item {
+                min-width: 30px;
+                max-width: 30px;
+            }
+            
+            .bar {
+                width: 24px;
+            }
+            
+            .bar-label {
+                font-size: 8px;
+                line-height: 1.1;
+            }
+            
+            .bar-value {
+                font-size: 9px;
+                padding: 3px 6px;
+                top: -25px;
             }
         }
 
@@ -399,6 +536,217 @@
             border-radius: 6px;
             font-size: 14px;
         }
+
+        .chart-view {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #e0e6ed;
+        }
+
+        .bar-chart {
+            width: 100%;
+            height: 280px;
+            border: 2px solid #e0e6ed;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bars-container {
+            display: flex;
+            align-items: end;
+            height: 200px;
+            padding: 20px;
+            gap: 8px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            width: 100%;
+            min-width: 0;
+        }
+        
+        /* 滚动条样式 */
+        .chart-bars-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .chart-bars-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .chart-bars-container::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+        
+        .chart-bars-container::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .bar-item {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 40px;
+            max-width: 40px;
+            position: relative;
+        }
+
+        .bar {
+            width: 30px;
+            min-height: 8px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            border-radius: 8px 8px 4px 4px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: barSlideUp 0.6s ease-out forwards;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .bar:hover {
+            background: linear-gradient(45deg, #27ae60 0%, #2ecc71 50%, #27ae60 100%);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .bar-label {
+            font-size: 11px;
+            color: #444;
+            margin-top: 8px;
+            text-align: center;
+            word-break: break-word;
+            line-height: 1.2;
+            max-width: 100%;
+            overflow: hidden;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 4px 2px;
+            border-radius: 4px;
+            backdrop-filter: blur(5px);
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: #2c3e50;
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            padding: 6px 10px;
+            border-radius: 12px;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .bar:hover .bar-value {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px) scale(1.05);
+        }
+        
+        @keyframes barSlideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .bar-item:hover {
+            z-index: 10;
+        }
+        
+        .bar-item:hover .bar-label {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+        
+        .chart-stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(248, 249, 250, 0.8);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #e0e6ed;
+        }
+        
+        .chart-stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .chart-stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        
+        .chart-stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes modalSlideIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .chart-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .chart-toggle button {
+            padding: 10px 20px;
+            border: 2px solid #e0e6ed;
+            background: white;
+            color: #2c3e50;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .chart-toggle button.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .chart-toggle button:hover:not(.active) {
+            border-color: #667eea;
+            color: #667eea;
+        }
     </style>
 </head>
 <body>
@@ -426,7 +774,7 @@
                 <div class="form-group">
                     <label for="view-mode">统计视图</label>
                     <select id="view-mode">
-                        <option value="licenses">按许可证模块</option>
+                        <option value="licenses">许可证列表</option>
                         <option value="users">按用户统计</option>
                         <option value="modules">按模块统计</option>
                     </select>
@@ -465,6 +813,14 @@
 
         <div class="dashboard">
             <div class="main-content">
+                <div class="chart-view">
+                    <h3>📊 数据可视化</h3>
+                    <div class="chart-toggle">
+                        <button id="table-view" class="active" onclick="switchChartView('table')">📋 表格视图</button>
+                        <button id="chart-view" onclick="switchChartView('chart')">📊 柱状图</button>
+                    </div>
+                </div>
+                
                 <h2>许可证使用情况</h2>
                 <div id="content-area">
                     <div class="loading">
@@ -472,16 +828,23 @@
                         正在加载许可证数据...
                     </div>
                 </div>
+                <div id="chart-container" style="display: none;">
+                    <div class="bar-chart" id="bar-chart"></div>
+                </div>
             </div>
 
             <div class="sidebar">
                 <div class="health-monitor">
-                    <h3>系统健康状态</h3>
+                    <h3>系统调用状态</h3>
                     <div class="health-chart">
-                        <div class="heartbeat-line"></div>
+                        <div class="chart-container">
+                            <svg class="line-chart" id="line-chart">
+                                <!-- Chart will be rendered here -->
+                            </svg>
+                        </div>
                     </div>
                     <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #7f8c8d;">
-                        实时监控系统状态
+                        实时调用请求状态
                     </p>
                 </div>
 
@@ -508,9 +871,16 @@
         let pageSize = 20;
         let totalItems = 0;
         let filteredData = [];
+        let currentChartView = 'table';
+        let healthDataPoints = [];
+        let animationFrameId;
+        const newSpikes = [];
+        let activeSpikePattern = [];
+
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
+            initializeHealthChart();
             loadSystemStatus();
             loadLicenseData();
             
@@ -529,7 +899,7 @@
             
             // Auto refresh every 5 minutes
             setInterval(loadLicenseData, 5 * 60 * 1000);
-            setInterval(loadSystemStatus, 30 * 1000);
+            setInterval(loadSystemStatus, 5 * 1000);
         });
 
         async function loadSystemStatus() {
@@ -549,63 +919,273 @@
                 
                 document.getElementById('debug-mode').textContent = data.debug_mode ? '调试模式' : '生产模式';
                 
-                // Update health chart based on recent health status
-                updateHealthChart(data.health_status);
-                
             } catch (error) {
                 console.error('Failed to load system status:', error);
                 document.getElementById('system-status').textContent = '离线';
                 document.getElementById('status-indicator').className = 'status-indicator offline';
                 document.getElementById('last-update').textContent = '连接失败';
-                updateHealthChart([{status: 'error', timestamp: new Date().toISOString()}]);
             }
         }
 
-        function updateHealthChart(healthData) {
-            const healthChart = document.querySelector('.health-chart');
-            if (!healthChart || !healthData || healthData.length === 0) return;
-            
-            // Clear existing health indicators
-            const existingBars = healthChart.querySelectorAll('.health-bar');
-            existingBars.forEach(bar => bar.remove());
-            
-            // Add health status bars
-            const maxBars = 20; // Show last 20 data points
-            const recentData = healthData.slice(-maxBars);
-            const barWidth = 100 / maxBars;
-            
-            recentData.forEach((data, index) => {
-                const bar = document.createElement('div');
-                bar.className = 'health-bar';
-                bar.style.cssText = `
-                    position: absolute;
-                    left: ${index * barWidth}%;
-                    bottom: 0;
-                    width: ${barWidth * 0.8}%;
-                    height: ${data.status === 'success' ? '80%' : '20%'};
-                    background: ${data.status === 'success' ? '#27ae60' : '#e74c3c'};
-                    transition: all 0.3s ease;
-                    border-radius: 2px 2px 0 0;
-                `;
-                healthChart.appendChild(bar);
-            });
-            
-            // Update heartbeat line animation based on success rate
-            const successRate = recentData.filter(d => d.status === 'success').length / recentData.length;
-            const heartbeatLine = healthChart.querySelector('.heartbeat-line');
-            if (heartbeatLine) {
-                if (successRate > 0.5) {
-                    heartbeatLine.style.background = '#27ae60';
-                    heartbeatLine.style.animationDuration = '2s';
-                } else {
-                    heartbeatLine.style.background = '#e74c3c';
-                    heartbeatLine.style.animationDuration = '4s';
+        function initializeHealthChart() {
+            const lineChart = document.getElementById('line-chart');
+            const chartWidth = lineChart.clientWidth || 280;
+            const chartHeight = lineChart.clientHeight || 130;
+            const baselineY = chartHeight / 1.5;
+
+            for (let i = 0; i < chartWidth; i++) {
+                healthDataPoints.push({ x: i, y: baselineY });
+            }
+            healthChartAnimator();
+        }
+
+        function healthChartAnimator() {
+            const lineChart = document.getElementById('line-chart');
+            if (!lineChart) return;
+
+            const chartWidth = lineChart.clientWidth || 280;
+            const chartHeight = lineChart.clientHeight || 130;
+            const baselineY = chartHeight / 1.5;
+            const scrollSpeed = 1.5; // pixels per frame
+
+            // Process all new spikes and merge them into the pattern queue
+            while (newSpikes.length > 0) {
+                const spike = newSpikes.shift();
+                const successPattern = [0, -2, -5, -10, -20, -35, -20, 10, 5, -5, 0, 0, 0, 0, 0, 0];
+                const errorPattern = [0, 2, 5, 10, 15, 10, 5, 2, 0, -2, 0, 2, 0, -2, 0, 0, 0, 0, 0];
+                const patternToAdd = (spike.status === 'success' ? successPattern : errorPattern);
+
+                for (let i = 0; i < patternToAdd.length; i++) {
+                    if (i < activeSpikePattern.length) {
+                        activeSpikePattern[i] += patternToAdd[i];
+                    } else {
+                        activeSpikePattern.push(patternToAdd[i]);
+                    }
                 }
             }
+
+            // Move existing points to the left
+            healthDataPoints.forEach(p => p.x -= scrollSpeed);
+
+            // Remove points that are off-screen
+            healthDataPoints = healthDataPoints.filter(p => p.x > -scrollSpeed);
+
+            // Add new points on the right to keep the chart full
+            const lastPoint = healthDataPoints[healthDataPoints.length - 1];
+            const startX = lastPoint ? lastPoint.x : 0;
+
+            for (let x = startX + 1; x <= chartWidth; x++) {
+                let yOffset = 0;
+                if (activeSpikePattern.length > 0) {
+                    yOffset = activeSpikePattern.shift();
+                }
+                healthDataPoints.push({ x: x, y: baselineY + yOffset });
+            }
+            
+            // Render the chart
+            lineChart.innerHTML = '';
+            lineChart.setAttribute('viewBox', `0 0 ${chartWidth} ${chartHeight}`);
+            
+            let pathData = '';
+            for (let i = 0; i < healthDataPoints.length; i++) {
+                const point = healthDataPoints[i];
+                if (i === 0) {
+                    pathData += `M ${point.x} ${point.y}`;
+                } else {
+                    pathData += ` L ${point.x} ${point.y}`;
+                }
+            }
+
+            if(pathData) {
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', pathData);
+                path.setAttribute('class', 'chart-line');
+                lineChart.appendChild(path);
+            }
+
+            animationFrameId = requestAnimationFrame(healthChartAnimator);
+        }
+
+        function switchChartView(view) {
+            currentChartView = view;
+            const tableView = document.getElementById('table-view');
+            const chartViewBtn = document.getElementById('chart-view');
+            const chartContainer = document.getElementById('chart-container');
+            const contentArea = document.getElementById('content-area');
+            
+            if (view === 'chart') {
+                tableView.classList.remove('active');
+                chartViewBtn.classList.add('active');
+                chartContainer.style.display = 'block';
+                contentArea.style.display = 'none';
+                renderBarChart();
+            } else {
+                tableView.classList.add('active');
+                chartViewBtn.classList.remove('active');
+                chartContainer.style.display = 'none';
+                contentArea.style.display = 'block';
+            }
+        }
+
+        function renderBarChart() {
+            const barChart = document.getElementById('bar-chart');
+            if (!barChart) return;
+            
+            barChart.innerHTML = '';
+            
+            let chartData = [];
+            let chartTitle = '';
+            let valueUnit = '';
+            
+            // Prepare data based on current view mode
+            switch(currentViewMode) {
+                case 'users':
+                    chartTitle = '👥 用户许可证使用情况';
+                    valueUnit = '个';
+                    chartData = (filteredData || []).slice(0, 20).map(user => ({
+                        label: user.username.length > 8 ? user.username.substring(0, 8) + '...' : user.username,
+                        fullLabel: user.username,
+                        value: user.total_licenses,
+                        color: user.total_licenses > 5 ? '#e74c3c' : user.total_licenses > 2 ? '#f39c12' : '#27ae60',
+                        details: `用户: ${user.username}\n使用许可证: ${user.total_licenses} 个\n主机数量: ${user.unique_hosts} 台\n主机列表: ${user.hosts.join(', ')}`
+                    }));
+                    break;
+                    
+                case 'modules':
+                    chartTitle = '🔧 模块许可证使用率';
+                    valueUnit = '%';
+                    chartData = (filteredData || []).slice(0, 20).map(module => ({
+                        label: module.feature.length > 8 ? module.feature.substring(0, 8) + '...' : module.feature,
+                        fullLabel: module.feature,
+                        value: module.usage_rate,
+                        color: module.usage_rate > 70 ? '#e74c3c' : module.usage_rate > 40 ? '#f39c12' : '#27ae60',
+                        details: `模块: ${module.feature}\n使用率: ${module.usage_rate.toFixed(1)}%\n总数/使用中/可用: ${module.total}/${module.in_use}/${module.available}\n使用用户: ${module.users.map(u => u.username).join(', ')}`
+                    }));
+                    break;
+                    
+                default: // licenses
+                    chartTitle = '📋 许可证使用率';
+                    valueUnit = '%';
+                    const licensesInUse = (filteredData || []).filter(license => license.in_use > 0).slice(0, 20);
+                    chartData = licensesInUse.map(license => ({
+                        label: license.feature.length > 8 ? license.feature.substring(0, 8) + '...' : license.feature,
+                        fullLabel: license.feature,
+                        value: (license.in_use / license.total * 100),
+                        color: license.in_use / license.total > 0.7 ? '#e74c3c' : license.in_use / license.total > 0.4 ? '#f39c12' : '#27ae60',
+                        details: `许可证: ${license.feature}\n使用率: ${(license.in_use / license.total * 100).toFixed(1)}%\n总数/使用中/可用: ${license.total}/${license.in_use}/${license.available}\n当前用户: ${license.users ? license.users.map(u => u.user).join(', ') : '无'}`
+                    }));
+                    break;
+            }
+            
+            if (chartData.length === 0) {
+                barChart.innerHTML = `
+                    <div style="text-align: center; color: #666; padding: 80px 20px;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">📊</div>
+                        <div style="font-size: 18px; margin-bottom: 10px;">暂无数据可显示</div>
+                        <div style="font-size: 14px; color: #999;">请检查数据源或调整筛选条件</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Add chart title and legend
+            const titleElement = document.createElement('div');
+            titleElement.innerHTML = `
+                <div style="text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #e0e6ed;">
+                    <h4 style="margin: 0; color: #2c3e50; font-size: 16px;">${chartTitle}</h4>
+                    <div style="margin-top: 8px; font-size: 12px; color: #666;">共 ${chartData.length} 项数据</div>
+                </div>
+            `;
+            barChart.appendChild(titleElement);
+            
+            // Create chart container
+            const chartContainer = document.createElement('div');
+            chartContainer.className = 'chart-bars-container';
+            
+            const maxValue = Math.max(...chartData.map(d => d.value));
+            
+            chartData.forEach((item, index) => {
+                const barItem = document.createElement('div');
+                barItem.className = 'bar-item';
+                
+                const height = Math.max((item.value / maxValue) * 180, 8); // Max height 180px, min 8px
+                
+                // Add gradient based on value range
+                let gradient = '';
+                if (item.color === '#e74c3c') {
+                    gradient = 'linear-gradient(45deg, #e74c3c 0%, #c0392b 50%, #e74c3c 100%)';
+                } else if (item.color === '#f39c12') {
+                    gradient = 'linear-gradient(45deg, #f39c12 0%, #d68910 50%, #f39c12 100%)';
+                } else {
+                    gradient = 'linear-gradient(45deg, #27ae60 0%, #229954 50%, #27ae60 100%)';
+                }
+                
+                barItem.innerHTML = `
+                    <div class="bar" 
+                         style="height: ${height}px; background: ${gradient}; animation-delay: ${index * 0.1}s;" 
+                         title="${item.details}"
+                         onclick="showItemDetails('${item.fullLabel}', '${item.details.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')">
+                        <div class="bar-value">${item.value.toFixed(1)}${valueUnit}</div>
+                    </div>
+                    <div class="bar-label" title="${item.fullLabel}">${item.label}</div>
+                `;
+                
+                chartContainer.appendChild(barItem);
+            });
+            
+            barChart.appendChild(chartContainer);
+            
+            // Add legend
+            const legendElement = document.createElement('div');
+            legendElement.innerHTML = `
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; padding-top: 15px; border-top: 1px solid #e0e6ed; font-size: 12px;">
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div style="width: 12px; height: 12px; background: #27ae60; border-radius: 2px;"></div>
+                        <span>良好 (${currentViewMode === 'users' ? '≤2个' : '≤40%'})</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div style="width: 12px; height: 12px; background: #f39c12; border-radius: 2px;"></div>
+                        <span>中等 (${currentViewMode === 'users' ? '3-5个' : '41-70%'})</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div style="width: 12px; height: 12px; background: #e74c3c; border-radius: 2px;"></div>
+                        <span>高负载 (${currentViewMode === 'users' ? '>5个' : '>70%'})</span>
+                    </div>
+                </div>
+            `;
+            barChart.appendChild(legendElement);
+            
+            // Add statistics summary
+            const statsElement = document.createElement('div');
+            const avgValue = (chartData.reduce((sum, item) => sum + item.value, 0) / chartData.length).toFixed(1);
+            const maxItem = chartData.reduce((max, item) => item.value > max.value ? item : max, chartData[0]);
+            const minItem = chartData.reduce((min, item) => item.value < min.value ? item : min, chartData[0]);
+            
+            statsElement.innerHTML = `
+                <div class="chart-stats">
+                    <div class="chart-stat-item">
+                        <span class="chart-stat-value">${avgValue}${valueUnit}</span>
+                        <div class="chart-stat-label">平均值</div>
+                    </div>
+                    <div class="chart-stat-item">
+                        <span class="chart-stat-value">${maxItem.value.toFixed(1)}${valueUnit}</span>
+                        <div class="chart-stat-label">最高值 (${maxItem.label})</div>
+                    </div>
+                    <div class="chart-stat-item">
+                        <span class="chart-stat-value">${minItem.value.toFixed(1)}${valueUnit}</span>
+                        <div class="chart-stat-label">最低值 (${minItem.label})</div>
+                    </div>
+                    <div class="chart-stat-item">
+                        <span class="chart-stat-value">${chartData.length}</span>
+                        <div class="chart-stat-label">数据项数</div>
+                    </div>
+                </div>
+            `;
+            barChart.appendChild(statsElement);
         }
 
         async function loadLicenseData() {
-            loadCurrentView();
+            await loadCurrentView();
         }
 
         async function loadCurrentView() {
@@ -653,8 +1233,9 @@
                         updateStats(allLicenses);
                         break;
                 }
-                
+                newSpikes.push({status: 'success', timestamp: new Date().toISOString()});
             } catch (error) {
+                newSpikes.push({status: 'error', timestamp: new Date().toISOString()});
                 console.error('Failed to load data:', error);
                 contentArea.innerHTML = `
                     <div class="error">
@@ -682,6 +1263,11 @@
             }
             
             renderPagination();
+            
+            // Update chart if in chart view mode
+            if (currentChartView === 'chart') {
+                renderBarChart();
+            }
         }
 
         function renderPagination() {
@@ -1049,15 +1635,79 @@
                 const result = await response.json();
                 
                 if (result.success) {
+                    newSpikes.push({status: 'success', timestamp: new Date().toISOString()});
                     alert('数据采集成功！');
                     await loadLicenseData();
                 } else {
+                    newSpikes.push({status: 'error', timestamp: new Date().toISOString()});
                     alert('数据采集失败！');
                 }
             } catch (error) {
+                newSpikes.push({status: 'error', timestamp: new Date().toISOString()});
                 console.error('Failed to collect data:', error);
                 alert('数据采集失败: ' + error.message);
             }
+        }
+        
+        function showItemDetails(title, details) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                animation: fadeIn 0.3s ease;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                max-width: 500px;
+                max-height: 80vh;
+                overflow-y: auto;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                transform: scale(0.9);
+                animation: modalSlideIn 0.3s ease forwards;
+            `;
+            
+            modalContent.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="margin: 0; color: #2c3e50; font-size: 18px;">📊 详细信息</h3>
+                    <button onclick="this.closest('.modal-overlay').remove()" 
+                            style="background: none; border: none; font-size: 24px; cursor: pointer; color: #999; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">×</button>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <pre style="white-space: pre-wrap; font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; color: #2c3e50;">${details}</pre>
+                </div>
+            `;
+            
+            modal.className = 'modal-overlay';
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Close on outside click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+            
+            // Close on Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    modal.remove();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
         }
     </script>
 </body>
