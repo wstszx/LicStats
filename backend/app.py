@@ -8,12 +8,13 @@ import re
 from threading import Thread
 import time
 import schedule
+import sys
 
 app = Flask(__name__)
 CORS(app)
 
 # Configuration
-DEBUG_MODE = True  # Set to False to use actual lmstat.exe
+DEBUG_MODE = False  # Set to False to use actual lmstat.exe
 LMSTAT_COMMAND = "lmstat.exe -c 29000@hqcndb -a"
 LOGS_DIR = "logs"
 DEBUG_FILE = "../234.txt"
@@ -252,6 +253,16 @@ class LicenseMonitor:
             'raw_content': content
         }
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 # Initialize monitor
 monitor = LicenseMonitor()
 
@@ -368,11 +379,13 @@ def get_module_statistics():
 # Serve frontend
 @app.route('/')
 def serve_frontend():
-    return send_from_directory('../frontend', 'index.html')
+    frontend_dir = resource_path('frontend')
+    return send_from_directory(frontend_dir, 'index.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
-    return send_from_directory('../frontend', path)
+    frontend_dir = resource_path('frontend')
+    return send_from_directory(frontend_dir, path)
 
 if __name__ == '__main__':
     print(f"License Monitor starting...")
