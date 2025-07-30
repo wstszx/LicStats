@@ -2,67 +2,1063 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>软件许可证分析看板</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>软件许可证监控仪表板 - License Monitor Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.9);
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-indicator.online {
+            background: #27ae60;
+        }
+
+        .status-indicator.offline {
+            background: #e74c3c;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .controls {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .control-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.9em;
+        }
+
+        select, input[type="text"], button {
+            padding: 12px 16px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .health-monitor {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .health-monitor h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .health-chart {
+            height: 150px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, #ecf0f1 0%, #bdc3c7 100%);
+        }
+
+        .heartbeat-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #27ae60;
+            transform: translateY(-1px);
+            animation: heartbeat 2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(-1px) scaleY(1);
+            }
+            40% {
+                transform: translateY(-20px) scaleY(3);
+            }
+            60% {
+                transform: translateY(-10px) scaleY(2);
+            }
+        }
+
+        .license-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .license-table th,
+        .license-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .license-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e6ed;
+        }
+
+        .license-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .usage-bar {
+            width: 100%;
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .usage-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .usage-low { background: #27ae60; }
+        .usage-medium { background: #f39c12; }
+        .usage-high { background: #e74c3c; }
+
+        .stats-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stats-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .stats-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #7f8c8d;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c66;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .status-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 50px;
+            color: #7f8c8d;
+        }
+
+        .license-details {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            gap: 10px;
+        }
+
+        .pagination-info {
+            background: #f8f9fa;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: #666;
+            font-size: 0.9em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .pagination button {
+            padding: 8px 16px;
+            border: 2px solid #e0e6ed;
+            background: white;
+            color: #2c3e50;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            min-width: 40px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .pagination button:disabled {
+            background: #f8f9fa;
+            color: #ccc;
+            cursor: not-allowed;
+            border-color: #f0f0f0;
+        }
+
+        .pagination button.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .pagination .page-info {
+            padding: 8px 16px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .page-size-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .page-size-selector select {
+            padding: 8px 12px;
+            border: 2px solid #e0e6ed;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-
     <div class="container">
-        <header>
-            <h1>软件许可证 (FlexNet/FlexLM) 日志分析</h1>
-            <p>上传 lmstat 日志文件 (.txt)，即时生成可视化分析报告。</p>
-        </header>
+        <div class="header">
+            <h1>🔧 软件许可证监控仪表板</h1>
+            <p>License Usage Monitoring Dashboard</p>
+        </div>
 
-        <main>
-            <div class="upload-section">
-                <input type="file" id="logFile" accept=".txt">
-                <label for="logFile" class="upload-button">选择日志文件</label>
-                <span id="fileName" class="file-name">未选择文件</span>
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-indicator online" id="status-indicator"></div>
+                <span>系统状态: <span id="system-status">连接中...</span></span>
+            </div>
+            <div class="status-item">
+                <span>最后更新: <span id="last-update">获取中...</span></span>
+            </div>
+            <div class="status-item">
+                <span>模式: <span id="debug-mode">检测中...</span></span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="view-mode">统计视图</label>
+                    <select id="view-mode">
+                        <option value="licenses">按许可证模块</option>
+                        <option value="users">按用户统计</option>
+                        <option value="modules">按模块统计</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time-filter">时间范围</label>
+                    <select id="time-filter">
+                        <option value="latest">最新数据</option>
+                        <option value="week">本周</option>
+                        <option value="month">本月</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="search-box">搜索过滤</label>
+                    <input type="text" id="search-box" placeholder="输入许可证名称或用户名...">
+                </div>
+                <div class="form-group">
+                    <label for="page-size">每页显示</label>
+                    <select id="page-size">
+                        <option value="10">10 条</option>
+                        <option value="20" selected>20 条</option>
+                        <option value="50">50 条</option>
+                        <option value="100">100 条</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button onclick="refreshData()">🔄 刷新数据</button>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button onclick="collectData()">📊 手动采集</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="main-content">
+                <h2>许可证使用情况</h2>
+                <div id="content-area">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        正在加载许可证数据...
+                    </div>
+                </div>
             </div>
 
-            <div id="loading" class="loading" style="display: none;">正在解析，请稍候...</div>
-            <div id="error" class="error" style="display: none;"></div>
-
-            <div id="results" class="results" style="display: none;">
-                <div class="chart-container">
-                    <h2>许可证使用概览</h2>
-                    <canvas id="licenseChart"></canvas>
+            <div class="sidebar">
+                <div class="health-monitor">
+                    <h3>系统健康状态</h3>
+                    <div class="health-chart">
+                        <div class="heartbeat-line"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #7f8c8d;">
+                        实时监控系统状态
+                    </p>
                 </div>
 
-                <div class="table-container">
-                    <h2>在用许可证详情</h2>
-                    <input type="text" id="searchInput" placeholder="按功能模块或用户名搜索...">
-                    <table id="licenseTable">
-                        <thead>
-                            <tr>
-                                <th data-sort="featureName">功能模块 &#x25B2;&#x25BC;</th>
-                                <th data-sort="username">使用者 &#x25B2;&#x25BC;</th>
-                                <th data-sort="hostname">主机名 &#x25B2;&#x25BC;</th>
-                                <th data-sort="startTime">开始使用时间 &#x25B2;&#x25BC;</th>
-                                <th data-sort="duration">已使用时长 &#x25B2;&#x25BC;</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                            <!-- 数据将通过JS动态插入 -->
-                        </tbody>
-                    </table>
+                <div class="stats-card">
+                    <h3>总许可证数</h3>
+                    <div class="stats-number" id="total-licenses">-</div>
+                    <p>已配置的许可证特性数量</p>
+                </div>
+
+                <div class="stats-card">
+                    <h3>使用中</h3>
+                    <div class="stats-number" id="licenses-in-use">-</div>
+                    <p>当前正在使用的许可证</p>
                 </div>
             </div>
-        </main>
-
-        <footer>
-            <p>轻量级许可证分析工具</p>
-        </footer>
+        </div>
     </div>
 
-    <!-- Libraries - Using CDN for simplicity, compatible with IE11 -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    
-    <!-- Main application script -->
-    <script src="js/main.js"></script>
+    <script>
+        let currentData = null;
+        let allLicenses = [];
+        let currentViewMode = 'licenses';
+        let currentPage = 1;
+        let pageSize = 20;
+        let totalItems = 0;
+        let filteredData = [];
 
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSystemStatus();
+            loadLicenseData();
+            
+            // Set up event listeners
+            document.getElementById('view-mode').addEventListener('change', function() {
+                currentViewMode = this.value;
+                loadCurrentView();
+            });
+            document.getElementById('time-filter').addEventListener('change', loadCurrentView);
+            document.getElementById('search-box').addEventListener('input', filterCurrentView);
+            document.getElementById('page-size').addEventListener('change', function() {
+                pageSize = parseInt(this.value);
+                currentPage = 1;
+                displayCurrentPageData();
+            });
+            
+            // Auto refresh every 5 minutes
+            setInterval(loadLicenseData, 5 * 60 * 1000);
+            setInterval(loadSystemStatus, 30 * 1000);
+        });
+
+        async function loadSystemStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                document.getElementById('system-status').textContent = '在线';
+                document.getElementById('status-indicator').className = 'status-indicator online';
+                
+                if (data.last_update) {
+                    const updateTime = new Date(data.last_update).toLocaleString('zh-CN');
+                    document.getElementById('last-update').textContent = updateTime;
+                } else {
+                    document.getElementById('last-update').textContent = '无数据';
+                }
+                
+                document.getElementById('debug-mode').textContent = data.debug_mode ? '调试模式' : '生产模式';
+                
+                // Update health chart based on recent health status
+                updateHealthChart(data.health_status);
+                
+            } catch (error) {
+                console.error('Failed to load system status:', error);
+                document.getElementById('system-status').textContent = '离线';
+                document.getElementById('status-indicator').className = 'status-indicator offline';
+                document.getElementById('last-update').textContent = '连接失败';
+                updateHealthChart([{status: 'error', timestamp: new Date().toISOString()}]);
+            }
+        }
+
+        function updateHealthChart(healthData) {
+            const healthChart = document.querySelector('.health-chart');
+            if (!healthChart || !healthData || healthData.length === 0) return;
+            
+            // Clear existing health indicators
+            const existingBars = healthChart.querySelectorAll('.health-bar');
+            existingBars.forEach(bar => bar.remove());
+            
+            // Add health status bars
+            const maxBars = 20; // Show last 20 data points
+            const recentData = healthData.slice(-maxBars);
+            const barWidth = 100 / maxBars;
+            
+            recentData.forEach((data, index) => {
+                const bar = document.createElement('div');
+                bar.className = 'health-bar';
+                bar.style.cssText = `
+                    position: absolute;
+                    left: ${index * barWidth}%;
+                    bottom: 0;
+                    width: ${barWidth * 0.8}%;
+                    height: ${data.status === 'success' ? '80%' : '20%'};
+                    background: ${data.status === 'success' ? '#27ae60' : '#e74c3c'};
+                    transition: all 0.3s ease;
+                    border-radius: 2px 2px 0 0;
+                `;
+                healthChart.appendChild(bar);
+            });
+            
+            // Update heartbeat line animation based on success rate
+            const successRate = recentData.filter(d => d.status === 'success').length / recentData.length;
+            const heartbeatLine = healthChart.querySelector('.heartbeat-line');
+            if (heartbeatLine) {
+                if (successRate > 0.5) {
+                    heartbeatLine.style.background = '#27ae60';
+                    heartbeatLine.style.animationDuration = '2s';
+                } else {
+                    heartbeatLine.style.background = '#e74c3c';
+                    heartbeatLine.style.animationDuration = '4s';
+                }
+            }
+        }
+
+        async function loadLicenseData() {
+            loadCurrentView();
+        }
+
+        async function loadCurrentView() {
+            const contentArea = document.getElementById('content-area');
+            contentArea.innerHTML = '<div class="loading"><div class="spinner"></div>正在加载数据...</div>';
+            
+            try {
+                let response, data;
+                
+                switch(currentViewMode) {
+                    case 'users':
+                        response = await fetch('/api/users');
+                        if (!response.ok) throw new Error('Failed to fetch user data');
+                        data = await response.json();
+                        currentData = data;
+                        filteredData = data.users || [];
+                        totalItems = filteredData.length;
+                        currentPage = 1;
+                        displayCurrentPageData();
+                        updateUserStats(data.users);
+                        break;
+                        
+                    case 'modules':
+                        response = await fetch('/api/modules');
+                        if (!response.ok) throw new Error('Failed to fetch module data');
+                        data = await response.json();
+                        currentData = data;
+                        filteredData = data.modules || [];
+                        totalItems = filteredData.length;
+                        currentPage = 1;
+                        displayCurrentPageData();
+                        updateModuleStats(data.modules);
+                        break;
+                        
+                    default: // licenses
+                        response = await fetch('/api/licenses');
+                        if (!response.ok) throw new Error('Failed to fetch license data');
+                        data = await response.json();
+                        currentData = data;
+                        allLicenses = data.licenses || [];
+                        filteredData = allLicenses;
+                        totalItems = filteredData.length;
+                        currentPage = 1;
+                        displayCurrentPageData();
+                        updateStats(allLicenses);
+                        break;
+                }
+                
+            } catch (error) {
+                console.error('Failed to load data:', error);
+                contentArea.innerHTML = `
+                    <div class="error">
+                        <strong>错误:</strong> 无法加载数据 - ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        function displayCurrentPageData() {
+            const startIndex = (currentPage - 1) * pageSize;
+            const endIndex = startIndex + pageSize;
+            const pageData = filteredData.slice(startIndex, endIndex);
+            
+            switch(currentViewMode) {
+                case 'users':
+                    displayUserStatistics(pageData);
+                    break;
+                case 'modules':
+                    displayModuleStatistics(pageData);
+                    break;
+                default:
+                    displayLicenseData(pageData);
+                    break;
+            }
+            
+            renderPagination();
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(totalItems / pageSize);
+            const contentArea = document.getElementById('content-area');
+            
+            // Add pagination info
+            const paginationInfo = `
+                <div class="pagination-info">
+                    显示第 ${((currentPage - 1) * pageSize) + 1} - ${Math.min(currentPage * pageSize, totalItems)} 条，
+                    共 ${totalItems} 条记录，第 ${currentPage} / ${totalPages} 页
+                </div>
+            `;
+            
+            // Add pagination controls
+            let paginationHtml = '<div class="pagination">';
+            
+            // Previous button
+            paginationHtml += `
+                <button ${currentPage <= 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">
+                    ‹ 上一页
+                </button>
+            `;
+            
+            // Page numbers
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, currentPage + 2);
+            
+            if (startPage > 1) {
+                paginationHtml += `<button onclick="goToPage(1)">1</button>`;
+                if (startPage > 2) {
+                    paginationHtml += '<span class="page-info">...</span>';
+                }
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHtml += `
+                    <button class="${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">
+                        ${i}
+                    </button>
+                `;
+            }
+            
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    paginationHtml += '<span class="page-info">...</span>';
+                }
+                paginationHtml += `<button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+            
+            // Next button
+            paginationHtml += `
+                <button ${currentPage >= totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">
+                    下一页 ›
+                </button>
+            `;
+            
+            paginationHtml += '</div>';
+            
+            // Append pagination to content
+            contentArea.innerHTML += paginationInfo + paginationHtml;
+        }
+
+        function goToPage(page) {
+            const totalPages = Math.ceil(totalItems / pageSize);
+            if (page >= 1 && page <= totalPages) {
+                currentPage = page;
+                displayCurrentPageData();
+            }
+        }
+
+        function displayLicenseData(licenses) {
+            const contentArea = document.getElementById('content-area');
+            
+            if (!licenses || licenses.length === 0) {
+                contentArea.innerHTML = '<div class="no-data">暂无许可证数据</div>';
+                return;
+            }
+            
+            let html = `
+                <table class="license-table">
+                    <thead>
+                        <tr>
+                            <th>许可证特性</th>
+                            <th>总数</th>
+                            <th>使用中</th>
+                            <th>可用</th>
+                            <th>使用率</th>
+                            <th>当前用户</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            licenses.forEach(license => {
+                const usagePercent = license.total > 0 ? (license.in_use / license.total * 100) : 0;
+                let usageClass = 'usage-low';
+                if (usagePercent > 70) usageClass = 'usage-high';
+                else if (usagePercent > 40) usageClass = 'usage-medium';
+                
+                const users = license.users && license.users.length > 0 
+                    ? license.users.map(u => u.user).join(', ')
+                    : '无';
+                
+                html += `
+                    <tr>
+                        <td><strong>${license.feature}</strong></td>
+                        <td>${license.total}</td>
+                        <td>${license.in_use}</td>
+                        <td>${license.available}</td>
+                        <td>
+                            ${usagePercent.toFixed(1)}%
+                            <div class="usage-bar">
+                                <div class="usage-fill ${usageClass}" style="width: ${usagePercent}%"></div>
+                            </div>
+                        </td>
+                        <td>${users}</td>
+                    </tr>
+                `;
+                
+                if (license.users && license.users.length > 0) {
+                    html += `
+                        <tr>
+                            <td colspan="6">
+                                <div class="license-details">
+                                    <strong>用户详情:</strong><br>
+                    `;
+                    license.users.forEach(user => {
+                        if (user.user && user.host) {
+                            html += `
+                                <div style="margin: 8px 0; padding: 8px; background: white; border-radius: 4px; border-left: 3px solid #667eea;">
+                                    <strong>👤 用户:</strong> ${user.user} &nbsp;&nbsp;
+                                    <strong>💻 主机:</strong> ${user.host}<br>
+                                    ${user.start_time ? `<strong>⏰ 开始时间:</strong> ${user.start_time} &nbsp;&nbsp;` : ''}
+                                    ${user.connection ? `<strong>🔗 连接:</strong> ${user.connection}` : ''}
+                                    ${user.linger ? `<br><strong>⏱️ Linger时间:</strong> ${user.linger} 秒` : ''}
+                                </div>
+                            `;
+                        } else {
+                            html += `• ${user.details}<br>`;
+                        }
+                    });
+                    html += `
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }
+            });
+            
+            html += '</tbody></table>';
+            contentArea.innerHTML = html;
+        }
+
+        function displayUserStatistics(users) {
+            const contentArea = document.getElementById('content-area');
+            
+            if (!users || users.length === 0) {
+                contentArea.innerHTML = '<div class="no-data">暂无用户数据</div>';
+                return;
+            }
+            
+            let html = `
+                <h3>📊 用户维度许可证使用统计</h3>
+                <div style="margin-bottom: 20px; font-size: 0.9em; color: #666;">
+                    共有 <strong>${users.length}</strong> 个用户正在使用许可证
+                </div>
+            `;
+            
+            users.forEach(user => {
+                html += `
+                    <div style="background: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #667eea;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h4 style="color: #2c3e50; margin: 0;">
+                                👤 ${user.username}
+                            </h4>
+                            <span style="background: #667eea; color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8em;">
+                                ${user.total_licenses} 个许可证
+                            </span>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong>💻 使用主机:</strong> ${user.hosts.join(', ')} (${user.unique_hosts} 台)
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong>📋 使用的许可证模块:</strong>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;">
+                `;
+                
+                user.licenses.forEach(license => {
+                    html += `
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid #e0e6ed;">
+                            <div><strong>${license.feature}</strong></div>
+                            <div style="font-size: 0.8em; color: #666; margin-top: 5px;">
+                                主机: ${license.host}<br>
+                                开始: ${license.start_time}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+            
+            contentArea.innerHTML = html;
+        }
+
+        function displayModuleStatistics(modules) {
+            const contentArea = document.getElementById('content-area');
+            
+            if (!modules || modules.length === 0) {
+                contentArea.innerHTML = '<div class="no-data">暂无模块使用数据</div>';
+                return;
+            }
+            
+            let html = `
+                <h3>🔧 模块维度许可证使用统计</h3>
+                <div style="margin-bottom: 20px; font-size: 0.9em; color: #666;">
+                    共有 <strong>${modules.length}</strong> 个模块正在被使用
+                </div>
+                <table class="license-table">
+                    <thead>
+                        <tr>
+                            <th>模块名称</th>
+                            <th>使用率</th>
+                            <th>总数/使用中/可用</th>
+                            <th>使用用户</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            modules.forEach(module => {
+                let usageClass = 'usage-low';
+                if (module.usage_rate > 70) usageClass = 'usage-high';
+                else if (module.usage_rate > 40) usageClass = 'usage-medium';
+                
+                html += `
+                    <tr>
+                        <td><strong>${module.feature}</strong></td>
+                        <td>
+                            ${module.usage_rate.toFixed(1)}%
+                            <div class="usage-bar">
+                                <div class="usage-fill ${usageClass}" style="width: ${module.usage_rate}%"></div>
+                            </div>
+                        </td>
+                        <td>${module.total} / ${module.in_use} / ${module.available}</td>
+                        <td>
+                `;
+                
+                module.users.forEach(user => {
+                    html += `
+                        <div style="margin: 5px 0; padding: 8px; background: #f8f9fa; border-radius: 4px; border-left: 3px solid #27ae60;">
+                            <strong>👤 ${user.username}</strong> @ 💻 ${user.host}<br>
+                            <span style="font-size: 0.8em; color: #666;">
+                                ⏰ ${user.start_time} | 🔗 ${user.connection}
+                            </span>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            contentArea.innerHTML = html;
+        }
+
+        function updateStats(licenses) {
+            const totalLicenses = licenses.length;
+            const totalInUse = licenses.reduce((sum, license) => sum + license.in_use, 0);
+            
+            document.getElementById('total-licenses').textContent = totalLicenses;
+            document.getElementById('licenses-in-use').textContent = totalInUse;
+        }
+
+        function updateUserStats(users) {
+            const totalUsers = users.length;
+            const totalLicensesInUse = users.reduce((sum, user) => sum + user.total_licenses, 0);
+            
+            document.getElementById('total-licenses').textContent = totalUsers;
+            document.getElementById('licenses-in-use').textContent = totalLicensesInUse;
+        }
+
+        function updateModuleStats(modules) {
+            const totalModules = modules.length;
+            const totalInUse = modules.reduce((sum, module) => sum + module.in_use, 0);
+            
+            document.getElementById('total-licenses').textContent = totalModules;
+            document.getElementById('licenses-in-use').textContent = totalInUse;
+        }
+
+        function filterCurrentView() {
+            const searchTerm = document.getElementById('search-box').value.toLowerCase().trim();
+            
+            if (!searchTerm) {
+                // No search term, show all data
+                switch(currentViewMode) {
+                    case 'users':
+                        filteredData = currentData?.users || [];
+                        break;
+                    case 'modules':
+                        filteredData = currentData?.modules || [];
+                        break;
+                    default:
+                        filteredData = allLicenses;
+                        break;
+                }
+            } else {
+                // Filter data based on search term
+                switch(currentViewMode) {
+                    case 'users':
+                        const allUsers = currentData?.users || [];
+                        filteredData = allUsers.filter(user => 
+                            user.username.toLowerCase().includes(searchTerm) ||
+                            user.hosts.some(host => host.toLowerCase().includes(searchTerm)) ||
+                            user.licenses.some(license => license.feature.toLowerCase().includes(searchTerm))
+                        );
+                        break;
+                        
+                    case 'modules':
+                        const allModules = currentData?.modules || [];
+                        filteredData = allModules.filter(module =>
+                            module.feature.toLowerCase().includes(searchTerm) ||
+                            module.users.some(user => 
+                                user.username.toLowerCase().includes(searchTerm) ||
+                                user.host.toLowerCase().includes(searchTerm)
+                            )
+                        );
+                        break;
+                        
+                    default: // licenses
+                        filteredData = allLicenses.filter(license =>
+                            license.feature.toLowerCase().includes(searchTerm) ||
+                            (license.users && license.users.some(user => 
+                                user.user.toLowerCase().includes(searchTerm) ||
+                                user.host.toLowerCase().includes(searchTerm)
+                            ))
+                        );
+                        break;
+                }
+            }
+            
+            totalItems = filteredData.length;
+            currentPage = 1; // Reset to first page after filtering
+            displayCurrentPageData();
+        }
+
+        async function refreshData() {
+            await loadCurrentView();
+        }
+
+        async function collectData() {
+            try {
+                const response = await fetch('/api/collect');
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('数据采集成功！');
+                    await loadLicenseData();
+                } else {
+                    alert('数据采集失败！');
+                }
+            } catch (error) {
+                console.error('Failed to collect data:', error);
+                alert('数据采集失败: ' + error.message);
+            }
+        }
+    </script>
 </body>
 </html>

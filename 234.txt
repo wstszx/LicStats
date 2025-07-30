@@ -1,0 +1,2257 @@
+lmstat - Copyright (c) 1989-2009 Flexera Software, Inc. All Rights Reserved.
+Flexible License Manager status on Fri 7/25/2025 12:54
+
+[Detecting lmgrd processes...]
+License server status: 29000@HQCNDB
+    License file(s) on HQCNDB: C:\ProgramData\Siemens\License Server\ActiveLicenses\ugslmd.lic:
+
+    HQCNDB: license server UP (MASTER) v11.19
+
+Vendor daemon status (on HQCNDB):
+
+     saltd: UP v11.19
+Feature usage info:
+
+Users of sdpd_ssm_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of semi_foundation:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of shipbuilding_cat:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of simulation_access:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of simulation_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of situadm_sap_gateway:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of smart_discovery:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of solid_modeling:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "solid_modeling" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 8801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of solidworks_integr:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of solidworks_integration:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of spec_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of step_integration:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of sub_comp:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of sub_comp_imds:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of sys_eng_access:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of sys_eng_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of t4stdmi_gateway:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_bom_foundation:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_briefcase:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_advanced:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_alignment:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_automotive_consumer:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_color:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_color_consumer:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_configmodule:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_configmodule_consumer:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_manager:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ebom_manager_consumer:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_gateway:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_gateway_model:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_imlm:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_integ_frmwrk:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_interface_mgmt:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_ipd_ebom_gtwy:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_jt_editor:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_med_dev_sol:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_partition_mgmt:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_se:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_solidworks_integr:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tc_system_modeler:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcaa_integration:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcmfg_4d_planning:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcmfg_adv_acc_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcmfg_ewi_viewer:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcmfg_mes_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tcmfg_mes_integ_auth:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_admin:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_author:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_ccp:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_ccr:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_cvi:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_doctor:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of teamcenter_tcrs:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of test_manager:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of tfea:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of variant_matrix:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of vector_embed_svc:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of vendor_mgt:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of view_mgmt_recipe:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of visview_ecad_dfx:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of 3d_to_2d_flattener:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "3d_to_2d_flattener" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 67001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of 3dxml_to_nx:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "3dxml_to_nx" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 67101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of GSPTNR101:  (Total of 1 license issued;  Total of 1 license in use)
+
+  "GSPTNR101" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v2024.12) (HQCNDB/29000 67301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of acis_nx_translator:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "acis_nx_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_automation_design:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_automation_design" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_cabinet_addon:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_cabinet_addon" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_electrical_design:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_electrical_design" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_eplan_addon:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_eplan_addon" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_mechanical_collab:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_mechanical_collab" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ad_tia_addon:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ad_tia_addon" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of adv_assemblies:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "adv_assemblies" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of adv_sheet_metal_dsgn:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "adv_sheet_metal_dsgn" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of aero_sheet_metal:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "aero_sheet_metal" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_arcam:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_arcam" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_cura:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_cura" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_eos:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_eos" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 14901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_mjf:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_mjf" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_renishaw:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_renishaw" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_siemens:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_siemens" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_slm:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_slm" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_bp_trumpf:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_bp_trumpf" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_cam_advanced:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_cam_advanced" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_cam_basic:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_cam_basic" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_mtls_nest_3d_1:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_mtls_nest_3d_1" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_mtls_nest_3d_2:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_mtls_nest_3d_2" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_mtls_sg_1:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_mtls_sg_1" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 15901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_mtls_sg_2:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_mtls_sg_2" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of am_pb_print_mark:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "am_pb_print_mark" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ansys_meshers:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ansys_meshers" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of appearance_mgmt:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "appearance_mgmt" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of appearance_mgmt_aw:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "appearance_mgmt_aw" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of appearance_mgmt_mgd:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "appearance_mgmt_mgd" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of assemblies:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "assemblies" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 8201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of c_p_p_author:  (Total of 399996 licenses issued;  Total of 1 license in use)
+
+  "c_p_p_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of c_p_p_runtime:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "c_p_p_runtime" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_1:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_1" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_10:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_10" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 16901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_2:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_2" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_3:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_3" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_4:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_4" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_5:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_5" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_6:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_6" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_7:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_7" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_8:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_8" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_additive_9:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_additive_9" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_base:  (Total of 6 licenses issued;  Total of 2 licenses in use)
+
+  "cam_base" v2024.12, vendor: ugslmd
+  floating license
+
+    Administrator JXY-DC02 JXY-DC020.0 (v23.000) (HQCNDB/29000 77903), start Fri 7/25 12:53
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 8301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_dialogs:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_dialogs" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_facets:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_facets" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 17901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1000:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1000" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1001:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1001" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1002:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1002" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1003:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1003" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1004:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1004" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1005:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1005" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1006:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1006" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1007:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1007" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1008:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1008" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_robotics_1009:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_robotics_1009" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 18901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_sme_1300:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_sme_1300" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_sme_1301:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_sme_1301" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_sme_1302:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_sme_1302" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cam_sme_1303:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cam_sme_1303" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catia4cad_translator:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "catia4cad_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catia5jtimport_trans:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "catia5jtimport_trans" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catiajtimport_trans:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "catiajtimport_trans" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catiav5jtimport_translator:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "catiav5jtimport_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cattoug:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cattoug" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catv5_nx_sca:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "catv5_nx_sca" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of catv5tojt_sca:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "catv5tojt_sca" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cavity_milling:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cavity_milling" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of cld_kinematics:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "cld_kinematics" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of conf_cooling_channel:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "conf_cooling_channel" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of contour_profile:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "contour_profile" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 19901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of des_top_opt:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "des_top_opt" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of design_studio:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "design_studio" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dfm_studio:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dfm_studio" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of die_engineering:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "die_engineering" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dmu_markup:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dmu_markup" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dmu_markup_viewer:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dmu_markup_viewer" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dotnet_author:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dotnet_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dpv_3d_measure:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dpv_3d_measure" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dxf_file_translator:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "dxf_file_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dxf_to_ug:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dxf_to_ug" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of dxfdwg:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "dxfdwg" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of elma:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "elma" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 20901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of eu_documentation:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "eu_documentation" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of factorycad:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "factorycad" v28.0, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of factoryflow:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "factoryflow" v28.0, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of fbm_author:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "fbm_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of features_modeling:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "features_modeling" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 8501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of femap:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "femap" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of fix_axis_surf_mill:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "fix_axis_surf_mill" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of flat_patterns:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "flat_patterns" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of flow_blend_for_nx:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "flow_blend_for_nx" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of flow_cut:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "flow_cut" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of flytojt_file_transl:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "flytojt_file_transl" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of flytojt_file_translator:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "flytojt_file_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 70901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of fp_fixture_planner:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "fp_fixture_planner" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of free_form_modeling:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "free_form_modeling" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of g3d_nx_translator:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "g3d_nx_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gateway:  (Total of 8 licenses issued;  Total of 2 licenses in use)
+
+  "gateway" v2024.12, vendor: ugslmd
+  floating license
+
+    Administrator JXY-DC02 JXY-DC020.0 (v23.000) (HQCNDB/29000 77801), start Fri 7/25 12:52
+
+  "gateway" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 8601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of geometric_tol:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "geometric_tol" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 21901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gfem_ansys:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "gfem_ansys" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gfem_nastran:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "gfem_nastran" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gmc:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "gmc" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of graphical_tool_path:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "graphical_tool_path" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of grip_development:  (Total of 399996 licenses issued;  Total of 1 license in use)
+
+  "grip_development" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of grip_execute:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "grip_execute" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gs_enterprise_tools:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of gs_gtservice:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "gs_gtservice" v1.0, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of gs_integrator:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of gs_server:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of gs_user:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of hds_heeds_dll_nx:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "hds_heeds_dll_nx" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of id_ext_fem_beam:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "id_ext_fem_beam" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ifc_to_jt:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ifc_to_jt" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ifc_to_nx:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ifc_to_nx" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 22901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of iges:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "iges" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of iges_file_translator:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "iges_file_translator" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 71001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of in_context_editor:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "in_context_editor" v28.0, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 13501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of insp_programming:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "insp_programming" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of jack_base:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of jack_mocap:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of jack_opt:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of jack_tat:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of jack_toolkit:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of java_author:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "java_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of jt_inspect_workflow:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "jt_inspect_workflow" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of jt_to_3mf:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "jt_to_3mf" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of jt_to_ifc:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "jt_to_ifc" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 9401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of jt_to_step:  (Total of 2 licenses issued;  Total of 1 license in use)
+
+  "jt_to_step" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 71101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ld_author:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ld_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ld_line_designer:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ld_line_designer" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of ld_plant_view:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ld_plant_view" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of make_mach_suggestion:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "make_mach_suggestion" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of mechanisms:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "mechanisms" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of mm_base:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "mm_base" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of mm_hpc:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "mm_hpc" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 23901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_cd_tire:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_cd_tire" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_dyn:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_dyn" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_dyn_lms:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_dyn_lms" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_dyn_recurdyn:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_dyn_recurdyn" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_export_adm:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_export_adm" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_ext_control:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_ext_control" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_flex_modal:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_flex_modal" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_kin:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_kin" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_kin_lms:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_kin_lms" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_kin_recurdyn:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "motion_kin_recurdyn" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 24901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_std_tire:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_std_tire" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_swift_tire:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_swift_tire" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of motion_tno_tire:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "motion_tno_tire" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of mrl_connect:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "mrl_connect" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nc_external_program:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nc_external_program" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nc_wizard_builder:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nc_wizard_builder" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nurb_output_enabler:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nurb_output_enabler" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_2d_edit:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_2d_edit" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 47501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_2d_nesting:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_2d_nesting" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 47601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_3d_adaptive_rough:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_3d_adaptive_rough" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 47701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_3d_path_planning:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_3d_path_planning" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 47801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_3d_swept_volume:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_3d_swept_volume" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 47901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_4gd_integration:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_4gd_integration" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 48001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_abaqus_env:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_abaqus_env" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_abaqus_export:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_abaqus_export" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_abaqus_export_g:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_abaqus_export_g" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 25901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_abaqus_import:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_abaqus_import" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_access_tcclass:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_access_tcclass" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_acoustic_modeling:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_acoustic_modeling" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_acoustics_bem_hpc:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_acoustics_bem_hpc" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_additive_design:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_additive_design" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_adina_env:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_adina_env" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_adv_durability:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_adv_durability" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_adv_fld_mod_solv:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_adv_fld_mod_solv" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_adv_fluid_mod:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_adv_fluid_mod" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_aero_design:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_aero_design" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 26901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_algorithmic:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_algorithmic" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_animationdesigner:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_animationdesigner" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ansys_env:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_ansys_env" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ansys_export:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_ansys_export" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ansys_export_g:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_ansys_export_g" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ansys_import:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_ansys_import" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_auto_hole_mach:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_auto_hole_mach" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_auto_test_studio:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_auto_test_studio" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_bem_atv_comp:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_bem_atv_comp" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_bim:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_bim" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 27901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_deburr_planar:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_deburr_planar" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_deburring3x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_deburring3x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_deburring4x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_deburring4x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_deburring5x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_deburring5x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_auth:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_auth" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_exec:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_exec" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_hei:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_hei" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_rfan:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_rfan" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_rhaa:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_rhaa" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_rsin:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_rsin" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 28901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_met_omp_sin:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_met_omp_sin" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_milling_2x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_milling_2x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_rotary_4x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_rotary_4x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_smks_3x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_smks_3x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_smks_4x:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_smks_4x" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_smks_additive:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_smks_additive" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_smks_complex:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_smks_complex" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_turn_mill:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_turn_mill" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_cam_turn_prime:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_cam_turn_prime" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_coatings:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_coatings" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 29901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_composites:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_composites" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_composites_cae:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_composites_cae" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_composites_laser:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_composites_laser" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_concrete:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_concrete" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_correl_base:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_correl_base" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_correl_update:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_correl_update" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_corrosion_risk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_corrosion_risk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_design_explorer:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_design_explorer" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_design_explr_eval:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_design_explr_eval" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_design_sim:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_design_sim" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 30901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_designworkset:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_designworkset" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_diagram_author:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_diagram_author" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_diagram_reader:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_diagram_reader" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_diagramming:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_diagramming" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_dievalidation:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_dievalidation" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_drafting_plus:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_drafting_plus" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_draw_shape:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_draw_shape" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_drawing_auto:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_drawing_auto" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_durability_wiz:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_durability_wiz" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_easyfill_advanced:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_easyfill_advanced" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 31901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_easyfill_analysis:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_easyfill_analysis" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_eclass:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_eclass" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_electrode_wizard:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_electrode_wizard" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_esc_solv:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_esc_solv" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_esc_ui:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_esc_ui" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_face_manual:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_face_manual" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_faw:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_faw" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_faw_solver:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_faw_solver" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_feature2cost_mold:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_feature2cost_mold" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_feature2cost_stmp:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_feature2cost_stmp" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 32901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_flexible_pcb:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_flexible_pcb" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_floor_wall:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_floor_wall" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_flow_adv_solv:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_flow_adv_solv" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_flow_adv_ui:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_flow_adv_ui" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_flow_solver:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_flow_solver" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_flow_ui:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_flow_ui" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_fmm_bem:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_fmm_bem" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_freeform_1:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_freeform_1" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_freeform_2:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_freeform_2" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ftk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ftk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 33901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_gc_toolkit:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_gc_toolkit" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_general_packaging:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_general_packaging" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_groove_mill:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_groove_mill" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_hmatrix_bem:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_hmatrix_bem" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_immersive_explore:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_immersive_explore" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_implicit:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_implicit" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_issue_mgmt:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_issue_mgmt" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_isv_mtb:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_isv_mtb" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_isv_vm_hmi:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_isv_vm_hmi" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 34901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_jacktkapi:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_jacktkapi" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_join:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_join" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lam_comp_adv:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_lam_comp_adv" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lam_composites:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_lam_composites" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lattice_base:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_lattice_base" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lattice_designer:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_lattice_designer" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lattice_type1:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_lattice_type1" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_layout:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_layout" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lnx_batch:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_lnx_batch" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lsdyna_export:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_lsdyna_export" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 35901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_lsdyna_import:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_lsdyna_import" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mach_line_planner:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mach_line_planner" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_masterfem:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_masterfem" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_material_system:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_material_system" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_math_notebook:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_math_notebook" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mbd:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mbd" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mbpm_bill_of_proc:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mbpm_bill_of_proc" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mcd_core:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mcd_core" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mcd_player:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mcd_player" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ml_cmd_pred_ui:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ml_cmd_pred_ui" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 36901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ml_region_finder:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ml_region_finder" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ml_sel_pred_std:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ml_sel_pred_std" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ml_show_hide:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ml_show_hide" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_ml_voice_std:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_ml_voice_std" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mlp_setup:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mlp_setup" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mlp_solid:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mlp_solid" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mold_cool_basic:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mold_cool_basic" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mold_cool_solve:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mold_cool_solve" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_motion_cosim:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_motion_cosim" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_motion_motor:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_motion_motor" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 37901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_motion_rflex:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_motion_rflex" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mscnastran_env:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_mscnastran_env" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_mu_notifications:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_mu_notifications" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_multi_blade_mill:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_multi_blade_mill" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_acou_hpc_lite:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_acou_hpc_lite" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_acous_adv:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_acous_adv" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_advnlin_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_advnlin_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_aero_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_aero_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_aero_vibro_ac:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_aero_vibro_ac" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_atv_comp:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_atv_comp" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 38901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_atv_use:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_atv_use" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_basic_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_basic_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_bn_basic_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_bn_basic_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_dmap_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_dmap_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_dmp_ent:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_dmp_ent" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39401), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_dyn_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_dyn_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39501), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_nonlin_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_nonlin_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39601), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_optim_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_optim_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39701), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_rotdyn_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_rotdyn_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39801), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_rotor:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_rotor" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 39901), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_supel_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_supel_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 40001), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_topol:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_topol" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 40101), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_uss_dsk:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_uss_dsk" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 40201), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nas_uss_ent:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "nx_nas_uss_ent" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 40301), start Mon 7/7 9:47 (linger: 10367880)
+
+Users of nx_nastran_export:  (Total of 8 licenses issued;  Total of 1 license in use)
+
+  "nx_nastran_export" v2024.12, vendor: ugslmd
+  floating license
+
+    yuanrui DESKTOP-6P3OE8J DESKTOP-6P3OE8J0.0 (v1.0) (HQCNDB/29000 40401), start Mon 7/7 9:47 (linger: 10367880)
+
+
