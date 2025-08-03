@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuration
-DEBUG_MODE = False  # Set to False to use actual lmstat.exe
+DEBUG_MODE = True  # Set to False to use actual lmstat.exe
 LMSTAT_COMMAND = "lmstat.exe -c 29000@hqcndb -a"
 LOGS_DIR = "logs"
 DEBUG_FILE = "../234.txt"
@@ -203,38 +203,76 @@ class LicenseMonitor:
         # Sort by usage rate descending
         module_stats.sort(key=lambda x: x['usage_rate'], reverse=True)
         return module_stats
+
+    def get_historical_summary(self, time_filter='week'):
+        """Get historical summary of license usage."""
+        log_files = self.get_log_files(time_filter)
+        
+        # We want chronological order, so reverse the list
+        log_files.reverse()
+        
+        summary_data = []
+        
+        for log_file in log_files:
+            try:
+                with open(log_file['filepath'], 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                licenses = self.parse_license_data(content)
+                
+                total_licenses_in_use = sum(l['in_use'] for l in licenses)
+                
+                # To get unique users, we need to aggregate them first
+                user_stats = self.get_user_statistics(licenses)
+                total_users = len(user_stats)
+                
+                summary_data.append({
+                    'timestamp': log_file['timestamp'],
+                    'total_licenses_in_use': total_licenses_in_use,
+                    'total_users': total_users
+                })
+            except Exception as e:
+                print(f"Error processing log file {log_file['filename']}: {e}")
+                # Optionally skip corrupted files
+                continue
+                
+        return summary_data
     
     def get_log_files(self, time_filter='latest'):
         """Get log files based on time filter"""
-        files = []
-        now = datetime.now()
-        
+        all_files = []
         for filename in os.listdir(LOGS_DIR):
             if filename.endswith('.txt'):
                 filepath = os.path.join(LOGS_DIR, filename)
-                mtime = datetime.fromtimestamp(os.path.getmtime(filepath))
-                
-                include_file = False
-                if time_filter == 'latest':
-                    include_file = True
-                elif time_filter == 'week':
-                    week_ago = now - timedelta(days=7)
-                    include_file = mtime >= week_ago
-                elif time_filter == 'month':
-                    month_ago = now - timedelta(days=30)
-                    include_file = mtime >= month_ago
-                
-                if include_file:
-                    files.append({
+                try:
+                    mtime = datetime.fromtimestamp(os.path.getmtime(filepath))
+                    all_files.append({
                         'filename': filename,
                         'filepath': filepath,
                         'timestamp': mtime.isoformat(),
                         'size': os.path.getsize(filepath)
                     })
+                except FileNotFoundError:
+                    # File might be deleted between listdir and getmtime
+                    continue
         
-        # Sort by timestamp descending
-        files.sort(key=lambda x: x['timestamp'], reverse=True)
-        return files
+        # Sort by timestamp descending to find the latest files first
+        all_files.sort(key=lambda x: x['timestamp'], reverse=True)
+
+        if time_filter == 'latest':
+            return all_files[:1]
+
+        now = datetime.now()
+        if time_filter == 'week':
+            week_ago = now - timedelta(days=7)
+            return [f for f in all_files if datetime.fromisoformat(f['timestamp']) >= week_ago]
+        
+        if time_filter == 'month':
+            month_ago = now - timedelta(days=30)
+            return [f for f in all_files if datetime.fromisoformat(f['timestamp']) >= month_ago]
+        
+        # Fallback for unknown filter, return all
+        return all_files
     
     def get_latest_license_data(self):
         """Get parsed license data from latest log file"""
@@ -253,13 +291,71 @@ class LicenseMonitor:
             'raw_content': content
         }
 
+    def get_aggregated_license_data(self, time_filter='latest'):
+        """Get aggregated license data from log files based on time filter"""
+        if time_filter == 'latest':
+            return self.get_latest_license_data()
+
+        log_files = self.get_log_files(time_filter)
+        if not log_files:
+            return None
+
+        aggregated_licenses = {}
+        all_raw_content = []
+        latest_timestamp = log_files[0]['timestamp'] if log_files else "N/A"
+
+        for log_file in log_files:
+            try:
+                with open(log_file['filepath'], 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    all_raw_content.append(f"--- Log from {log_file['filename']} ---\n{content}")
+                
+                licenses = self.parse_license_data(content)
+                
+                for license_data in licenses:
+                    feature = license_data['feature']
+                    if feature not in aggregated_licenses:
+                        aggregated_licenses[feature] = {
+                            'feature': feature,
+                            'total': 0,
+                            'in_use': 0,  # Max concurrent usage
+                            'users': {}  # To store unique users based on user, host, and start time
+                        }
+                    
+                    agg_license = aggregated_licenses[feature]
+                    agg_license['total'] = max(agg_license['total'], license_data['total'])
+                    agg_license['in_use'] = max(agg_license['in_use'], license_data['in_use'])
+                    
+                    for user in license_data['users']:
+                        user_key = f"{user['user']}|{user['host']}|{user.get('start_time', '')}"
+                        if user_key not in agg_license['users']:
+                            agg_license['users'][user_key] = user
+
+            except Exception as e:
+                print(f"Error processing log file for aggregation {log_file['filename']}: {e}")
+                continue
+
+        final_licenses = []
+        for feature, data in aggregated_licenses.items():
+            data['users'] = list(data['users'].values())
+            # Recalculate available based on max concurrent usage
+            data['available'] = data['total'] - data['in_use']
+            final_licenses.append(data)
+
+        return {
+            'timestamp': latest_timestamp,
+            'licenses': final_licenses,
+            'raw_content': "\n".join(all_raw_content)
+        }
+
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        # In development, the base path is the project root (one level up from this script)
+        base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
     return os.path.join(base_path, relative_path)
 
@@ -292,7 +388,7 @@ def get_status():
     return jsonify({
         'last_update': monitor.last_update.isoformat() if monitor.last_update else None,
         'debug_mode': DEBUG_MODE,
-        'update_interval': UPDATE_INTERVAL,
+        'update_interval_seconds': UPDATE_INTERVAL * 60,
         'health_status': monitor.health_status[-10:]  # Last 10 records
     })
 
@@ -303,10 +399,11 @@ def get_health():
 
 @app.route('/api/licenses')
 def get_licenses():
-    """Get latest license data"""
-    data = monitor.get_latest_license_data()
-    if not data:
-        return jsonify({'error': 'No data available'}), 404
+    """Get license data based on filter"""
+    time_filter = request.args.get('filter', 'latest')
+    data = monitor.get_aggregated_license_data(time_filter)
+    if not data or not data.get('licenses'):
+        return jsonify({'error': 'No data available for the selected period'}), 404
     
     return jsonify(data)
 
@@ -350,10 +447,11 @@ def manual_collect():
 
 @app.route('/api/users')
 def get_user_statistics():
-    """Get user-based statistics"""
-    data = monitor.get_latest_license_data()
-    if not data:
-        return jsonify({'error': 'No data available'}), 404
+    """Get user-based statistics based on filter"""
+    time_filter = request.args.get('filter', 'latest')
+    data = monitor.get_aggregated_license_data(time_filter)
+    if not data or not data.get('licenses'):
+        return jsonify({'error': 'No data available for the selected period'}), 404
     
     user_stats = monitor.get_user_statistics(data['licenses'])
     return jsonify({
@@ -364,16 +462,50 @@ def get_user_statistics():
 
 @app.route('/api/modules')
 def get_module_statistics():
-    """Get module-based statistics"""
-    data = monitor.get_latest_license_data()
-    if not data:
-        return jsonify({'error': 'No data available'}), 404
+    """Get module-based statistics based on filter"""
+    time_filter = request.args.get('filter', 'latest')
+    data = monitor.get_aggregated_license_data(time_filter)
+    if not data or not data.get('licenses'):
+        return jsonify({'error': 'No data available for the selected period'}), 404
     
     module_stats = monitor.get_module_statistics(data['licenses'])
     return jsonify({
         'timestamp': data['timestamp'],
         'modules': module_stats,
         'total_active_modules': len(module_stats)
+    })
+
+@app.route('/api/historical_summary')
+def get_historical_summary_data():
+    """Get historical summary data for charts."""
+    time_filter = request.args.get('filter', 'week') # default to last week
+    data = monitor.get_historical_summary(time_filter)
+    return jsonify(data)
+
+@app.route('/api/realtime_stats')
+def get_realtime_stats():
+    """Get latest user and license counts for real-time chart"""
+    data = monitor.get_latest_license_data()
+    if not data or not data.get('licenses'):
+        return jsonify({
+            'timestamp': datetime.now().isoformat(),
+            'total_licenses_in_use': 0,
+            'total_users': 0
+        })
+
+    licenses = data['licenses']
+    total_licenses_in_use = sum(l.get('in_use', 0) for l in licenses)
+    
+    user_set = set()
+    for license_data in licenses:
+        for user in license_data.get('users', []):
+            user_set.add(user['user'])
+    total_users = len(user_set)
+
+    return jsonify({
+        'timestamp': data['timestamp'],
+        'total_licenses_in_use': total_licenses_in_use,
+        'total_users': total_users
     })
 
 # Serve frontend
