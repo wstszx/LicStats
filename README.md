@@ -159,6 +159,27 @@ UPDATE_INTERVAL = 5         # 数据采集间隔(分钟)
 - 更改许可证服务器: 修改 `LMSTAT_COMMAND` 变量
 - 自定义界面: 编辑 `index.html` 中的CSS样式
 
+### 打包为EXE
+
+可以使用 PyInstaller 将本应用打包为单个的可执行文件，方便在没有 Python 环境的 Windows 上运行。
+
+1.  **安装 PyInstaller**:
+    ```bash
+    pip install pyinstaller
+    ```
+
+2.  **执行打包命令**:
+    在项目根目录下运行以下命令：
+    ```bash
+    pyinstaller --onefile --name LicStats --add-data "frontend;frontend" backend/app.py
+    ```
+    *   `--onefile`: 创建单文件程序。
+    *   `--name LicStats`: 指定输出的EXE文件名。
+    *   `--add-data "frontend;frontend"`: 将前端文件打包进去。
+
+3.  **找到可执行文件**:
+    打包成功后，可在 `dist/` 目录下找到 `LicStats.exe` 文件。
+
 ## 许可证
 
 本项目基于 MIT 许可证开source。
