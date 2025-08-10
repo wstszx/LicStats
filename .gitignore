@@ -21,3 +21,6 @@ nul
 dist/
 build/
 *.spec
+
+copies/
+logs/

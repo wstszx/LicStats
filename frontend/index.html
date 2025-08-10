@@ -1155,6 +1155,12 @@
             contentArea.innerHTML = '<div class="loading"><div class="spinner"></div>正在加载数据...</div>';
             
             try {
+                // Always fetch global license stats to ensure consistency
+                const globalStatsResponse = await fetch('/api/licenses?filter=latest');
+                if (!globalStatsResponse.ok) throw new Error('Failed to fetch global stats');
+                const globalStatsData = await globalStatsResponse.json();
+                updateStats(globalStatsData.licenses || []);
+
                 let response, data;
                 
                 switch(currentViewMode) {
@@ -1167,7 +1173,6 @@
                         totalItems = filteredData.length;
                         currentPage = 1;
                         displayCurrentPageData();
-                        updateUserStats(data.users);
                         break;
                         
                     case 'modules':
@@ -1179,7 +1184,6 @@
                         totalItems = filteredData.length;
                         currentPage = 1;
                         displayCurrentPageData();
-                        updateModuleStats(data.modules);
                         break;
                         
                     default: // licenses
@@ -1192,7 +1196,7 @@
                         totalItems = filteredData.length;
                         currentPage = 1;
                         displayCurrentPageData();
-                        updateStats(allLicenses);
+                        // Stats are already updated from the 'latest' call
                         break;
                 }
                 newSpikes.push({status: 'success', timestamp: new Date().toISOString()});
@@ -1318,7 +1322,6 @@
                             <th>使用中</th>
                             <th>可用</th>
                             <th>使用率</th>
-                            <th>当前用户</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1329,10 +1332,6 @@
                 let usageClass = 'usage-low';
                 if (usagePercent > 70) usageClass = 'usage-high';
                 else if (usagePercent > 40) usageClass = 'usage-medium';
-                
-                const users = license.users && license.users.length > 0 
-                    ? license.users.map(u => u.user).join(', ')
-                    : '无';
                 
                 html += `
                     <tr>
@@ -1346,38 +1345,8 @@
                                 <div class="usage-fill ${usageClass}" style="width: ${usagePercent}%"></div>
                             </div>
                         </td>
-                        <td>${users}</td>
                     </tr>
                 `;
-                
-                if (license.users && license.users.length > 0) {
-                    html += `
-                        <tr>
-                            <td colspan="6">
-                                <div class="license-details">
-                                    <strong>用户详情:</strong><br>
-                    `;
-                    license.users.forEach(user => {
-                        if (user.user && user.host) {
-                            html += `
-                                <div style="margin: 8px 0; padding: 8px; background: white; border-radius: 4px; border-left: 3px solid #667eea;">
-                                    <strong>👤 用户:</strong> ${user.user} &nbsp;&nbsp;
-                                    <strong>💻 主机:</strong> ${user.host}<br>
-                                    ${user.start_time ? `<strong>⏰ 开始时间:</strong> ${user.start_time} &nbsp;&nbsp;` : ''}
-                                    ${user.connection ? `<strong>🔗 连接:</strong> ${user.connection}` : ''}
-                                    ${user.linger ? `<br><strong>⏱️ Linger时间:</strong> ${user.linger} 秒` : ''}
-                                </div>
-                            `;
-                        } else {
-                            html += `• ${user.details}<br>`;
-                        }
-                    });
-                    html += `
-                                </div>
-                            </td>
-                        </tr>
-                    `;
-                }
             });
             
             html += '</tbody></table>';
@@ -1460,6 +1429,8 @@
                     <thead>
                         <tr>
                             <th>模块名称</th>
+                            <th>峰值</th>
+                            <th>总使用时长 (分钟)</th>
                             <th>使用率</th>
                             <th>总数/使用中/可用</th>
                             <th>使用用户</th>
@@ -1476,6 +1447,8 @@
                 html += `
                     <tr>
                         <td><strong>${module.feature}</strong></td>
+                        <td>${module.peak_usage}</td>
+                        <td>${module.total_duration_minutes}</td>
                         <td>
                             ${module.usage_rate.toFixed(1)}%
                             <div class="usage-bar">
@@ -1524,31 +1497,6 @@
             document.getElementById('current-users').textContent = userSet.size;
         }
 
-        function updateUserStats(users) {
-            const totalUsers = users.length;
-            const totalLicensesInUse = users.reduce((sum, user) => sum + user.total_licenses, 0);
-            
-            document.getElementById('total-licenses').textContent = totalUsers;
-            document.getElementById('licenses-in-use').textContent = totalLicensesInUse;
-            document.getElementById('current-users').textContent = totalUsers;
-        }
-
-        function updateModuleStats(modules) {
-            const totalModules = modules.length;
-            const totalInUse = modules.reduce((sum, module) => sum + module.in_use, 0);
-            
-            document.getElementById('total-licenses').textContent = totalModules;
-            document.getElementById('licenses-in-use').textContent = totalInUse;
-
-            // Calculate unique users
-            const userSet = new Set();
-            modules.forEach(module => {
-                if (module.users) {
-                    module.users.forEach(user => userSet.add(user.username));
-                }
-            });
-            document.getElementById('current-users').textContent = userSet.size;
-        }
 
         function filterCurrentView() {
             const searchTerm = document.getElementById('search-box').value.toLowerCase().trim();

@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuration
-DEBUG_MODE = True  # Set to False to use actual lmstat.exe
+DEBUG_MODE = False  # Set to False to use actual lmstat.exe
 LMSTAT_COMMAND = "lmstat.exe -c 29000@hqcndb -a"
 LOGS_DIR = "logs"
 DEBUG_FILE = "../234.txt"
@@ -35,7 +35,7 @@ class LicenseMonitor:
         try:
             if DEBUG_MODE:
                 # Read from debug file
-                with open(DEBUG_FILE, 'r', encoding='utf-8') as f:
+                with open(resource_path(DEBUG_FILE), 'r', encoding='utf-8') as f:
                     output = f.read()
             else:
                 # Execute actual command
@@ -179,29 +179,21 @@ class LicenseMonitor:
         """Generate module-based statistics"""
         module_stats = []
         for license in licenses:
-            if license['in_use'] > 0:  # Only include modules in use
+            if license.get('in_use', 0) > 0 or license.get('peak_usage', 0) > 0:  # Include if ever used in period
                 module_info = {
                     'feature': license['feature'],
                     'total': license['total'],
-                    'in_use': license['in_use'], 
-                    'available': license['available'],
-                    'usage_rate': (license['in_use'] / license['total'] * 100) if license['total'] > 0 else 0,
-                    'users': []
+                    'in_use': license.get('in_use', 0), # Current in_use
+                    'available': license['total'] - license.get('in_use', 0),
+                    'usage_rate': (license.get('in_use', 0) / license['total'] * 100) if license['total'] > 0 else 0,
+                    'users': license.get('users', []),
+                    'peak_usage': license.get('peak_usage', 0),
+                    'total_duration_minutes': license.get('total_duration_minutes', 0)
                 }
-                
-                for user in license['users']:
-                    module_info['users'].append({
-                        'username': user['user'],
-                        'host': user['host'],
-                        'start_time': user.get('start_time', 'Unknown'),
-                        'connection': user.get('connection', 'Unknown'),
-                        'linger': user.get('linger', 'Unknown')
-                    })
-                
                 module_stats.append(module_info)
         
-        # Sort by usage rate descending
-        module_stats.sort(key=lambda x: x['usage_rate'], reverse=True)
+        # Sort by peak usage descending
+        module_stats.sort(key=lambda x: x['peak_usage'], reverse=True)
         return module_stats
 
     def get_historical_summary(self, time_filter='week'):
@@ -294,7 +286,12 @@ class LicenseMonitor:
     def get_aggregated_license_data(self, time_filter='latest'):
         """Get aggregated license data from log files based on time filter"""
         if time_filter == 'latest':
-            return self.get_latest_license_data()
+            data = self.get_latest_license_data()
+            if data and data.get('licenses'):
+                for lic in data['licenses']:
+                    lic['peak_usage'] = lic['in_use']
+                    lic['total_duration_minutes'] = UPDATE_INTERVAL if lic['in_use'] > 0 else 0
+            return data
 
         log_files = self.get_log_files(time_filter)
         if not log_files:
@@ -318,27 +315,42 @@ class LicenseMonitor:
                         aggregated_licenses[feature] = {
                             'feature': feature,
                             'total': 0,
-                            'in_use': 0,  # Max concurrent usage
-                            'users': {}  # To store unique users based on user, host, and start time
+                            'peak_usage': 0,
+                            'total_duration_minutes': 0,
+                            'users': {}
                         }
                     
                     agg_license = aggregated_licenses[feature]
                     agg_license['total'] = max(agg_license['total'], license_data['total'])
-                    agg_license['in_use'] = max(agg_license['in_use'], license_data['in_use'])
+                    agg_license['peak_usage'] = max(agg_license['peak_usage'], license_data['in_use'])
                     
+                    # Add duration for each user found in this log file
+                    if license_data['in_use'] > 0:
+                        agg_license['total_duration_minutes'] += UPDATE_INTERVAL * license_data['in_use']
+
                     for user in license_data['users']:
-                        user_key = f"{user['user']}|{user['host']}|{user.get('start_time', '')}"
+                        user_key = f"{user['user']}|{user['host']}"
                         if user_key not in agg_license['users']:
-                            agg_license['users'][user_key] = user
+                             agg_license['users'][user_key] = user
 
             except Exception as e:
                 print(f"Error processing log file for aggregation {log_file['filename']}: {e}")
                 continue
+        
+        # Get latest 'in_use' count from the most recent file
+        latest_data = self.get_latest_license_data()
+        latest_licenses = {lic['feature']: lic for lic in latest_data.get('licenses', [])}
 
         final_licenses = []
         for feature, data in aggregated_licenses.items():
             data['users'] = list(data['users'].values())
-            # Recalculate available based on max concurrent usage
+            
+            # Set current 'in_use' from the latest data
+            if feature in latest_licenses:
+                data['in_use'] = latest_licenses[feature]['in_use']
+            else:
+                data['in_use'] = 0
+            
             data['available'] = data['total'] - data['in_use']
             final_licenses.append(data)
 
