@@ -1155,11 +1155,11 @@
             contentArea.innerHTML = '<div class="loading"><div class="spinner"></div>正在加载数据...</div>';
             
             try {
-                // Always fetch global license stats to ensure consistency
-                const globalStatsResponse = await fetch('/api/licenses?filter=latest');
-                if (!globalStatsResponse.ok) throw new Error('Failed to fetch global stats');
-                const globalStatsData = await globalStatsResponse.json();
-                updateStats(globalStatsData.licenses || []);
+                // Fetch license data based on the selected time filter to update stats
+                const statsResponse = await fetch(`/api/licenses?filter=${timeFilter}`);
+                if (!statsResponse.ok) throw new Error('Failed to fetch stats data');
+                const statsData = await statsResponse.json();
+                updateStats(statsData.licenses || []);
 
                 let response, data;
                 
@@ -1187,16 +1187,13 @@
                         break;
                         
                     default: // licenses
-                        response = await fetch(`/api/licenses?filter=${timeFilter}`);
-                        if (!response.ok) throw new Error('Failed to fetch license data');
-                        data = await response.json();
-                        currentData = data;
-                        allLicenses = data.licenses || [];
+                        // We already fetched this data for the stats, so we can reuse it.
+                        currentData = statsData;
+                        allLicenses = statsData.licenses || [];
                         filteredData = allLicenses;
                         totalItems = filteredData.length;
                         currentPage = 1;
                         displayCurrentPageData();
-                        // Stats are already updated from the 'latest' call
                         break;
                 }
                 newSpikes.push({status: 'success', timestamp: new Date().toISOString()});

@@ -14,10 +14,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuration
-DEBUG_MODE = False  # Set to False to use actual lmstat.exe
+DEBUG_MODE = True  # Set to False to use actual lmstat.exe
 LMSTAT_COMMAND = "lmstat.exe -c 29000@hqcndb -a"
 LOGS_DIR = "logs"
-DEBUG_FILE = "../234.txt"
+DEBUG_FILE = "234.txt"
 UPDATE_INTERVAL = 1  # minutes
 
 class LicenseMonitor:
@@ -461,11 +461,17 @@ def manual_collect():
 def get_user_statistics():
     """Get user-based statistics based on filter"""
     time_filter = request.args.get('filter', 'latest')
-    data = monitor.get_aggregated_license_data(time_filter)
+    
+    if time_filter == 'latest':
+        data = monitor.get_latest_license_data()
+    else:
+        data = monitor.get_aggregated_license_data(time_filter)
+
     if not data or not data.get('licenses'):
         return jsonify({'error': 'No data available for the selected period'}), 404
     
     user_stats = monitor.get_user_statistics(data['licenses'])
+    
     return jsonify({
         'timestamp': data['timestamp'],
         'users': user_stats,
